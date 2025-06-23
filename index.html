@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Cyber Crime Complaint Status Tracker</title>
+    <link rel="icon" href="https://cybercrime.gov.in/assets/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gov-topbar"></div>
+    <header class="main-header">
+        <div class="header-left">
+            <img src="https://cybercrime.gov.in/assets/images/emblem-dark.png" alt="National Emblem"
+                class="logo emblem">
+        </div>
+        <div class="header-center">
+            <span class="gov-india">भारत सरकार | GOVERNMENT OF INDIA</span>
+            <span class="mha">गृह मंत्रालय | MINISTRY OF HOME AFFAIRS</span>
+            <h1>राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल<br><span class="en-title">National Cyber Crime Complaint Status
+                    Tracker</span></h1>
+        </div>
+        <div class="header-right">
+            <img src="g20.png" alt="G20 Logo" class="logo g20">
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Track Your Cyber Crime Complaint Status</h2>
+            <form id="searchForm" class="search-form">
+                <label for="complaintId">Enter Complaint ID:</label>
+                <input type="text" id="complaintId" name="complaintId" placeholder="Enter Complaint ID" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="result"></div>
+            <div id="complaint-progress" style="display:none; margin:30px auto 0 auto; max-width:440px;">
+                <div class="progress-card"
+                    style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:24px 28px 18px 28px;">
+                    <h3 style="margin-bottom:18px;color:#0b3d91;font-size:1.18em;">Complaint Progress</h3>
+                    <div class="progress-steps" style="margin-bottom:18px;">
+                        <div class="step completed">
+                            <div class="circle">1</div>
+                            <div class="label">Complaint Registered</div>
+                        </div>
+                        <div class="step completed">
+                            <div class="circle">2</div>
+                            <div class="label">Assigned to Officer</div>
+                        </div>
+                        <div class="step active">
+                            <div class="circle">3</div>
+                            <div class="label">Under Investigation</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle">4</div>
+                            <div class="label">Action/Closure</div>
+                        </div>
+                    </div>
+                    <div style="background:#e9ecef;border-radius:8px;padding:12px 18px;font-size:1.05em;">
+                        <b>Status:</b> <span style="color:#0b3d91;">Under Investigation (70%)</span>
+                    </div>
+                </div>
+            </div>
+            <div id="offender-details" style="display:none; margin-top:30px;">
+                <div
+                    style="display:flex;align-items:center;gap:24px;background:#fff;border-radius:10px;padding:22px 28px 22px 18px;box-shadow:0 2px 12px rgba(0,0,0,0.07);max-width:420px;margin:0 auto 0 auto;">
+                    <!-- <img src="kaustuk.jpeg" alt="Kaustuk Pandey"
+                        style="width:110px;height:110px;border-radius:50%;border:3px solid #0b3d91;object-fit:cover;object-position:center center;box-shadow:0 2px 8px rgba(0,0,0,0.12);background:#e9ecef;aspect-ratio:1/1;"> -->
+                    <div style="flex:1;min-width:0;">
+                        <h3 style="margin:0 0 12px 0;font-size:1.15em;color:#0b3d91;letter-spacing:0.2px;">Offender
+                            Details</h3>
+                        <img src="kaustuk.jpeg" alt="Kaustuk Pandey"
+                            style="width:110px;height:110px;border-radius:50%;border:3px solid #0b3d91;object-fit:cover;object-position:center center;box-shadow:0 2px 8px rgba(0,0,0,0.12);background:#e9ecef;aspect-ratio:1/1;">
+                        <table style="width:100%;font-size:1.04em;border-collapse:collapse;">
+                            <tr>
+                                <td style="font-weight:600;width:110px;padding:6px 0 6px 0;vertical-align:top;">Name:
+                                </td>
+                                <td style="padding:6px 0 6px 0;word-break:break-word;">Kaustuk Pandey</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;padding:6px 0 6px 0;vertical-align:top;">Mobile No.:</td>
+                                <td style="padding:6px 0 6px 0;word-break:break-word;">7470996968</td>
+                            </tr>
+                        </table>
+                        <div class="offender-warning"
+                            style="margin-top:16px; background:#fff3cd; border-left:5px solid #dc3545; padding:13px 16px; border-radius:7px; color:#856404; font-size:1.01em;line-height:1.6;">
+                            <b>Warning:</b> Your details have been registered in a cyber crime complaint. Law
+                            enforcement
+                            agencies are monitoring this case. Failure to resolve the matter may result in legal action,
+                            including police investigation and possible arrest under relevant sections of the IPC and IT
+                            Act.<br><br>
+                            <b>Note:</b> All digital footprints and communications are being tracked. Cooperate
+                            immediately to avoid further consequences.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>For assistance, contact our helpline: <b>1930</b></p>
+
+        <p style="font-size:0.95em;color:#888;margin-top:10px;">© 2025 National Cyber Crime Reporting Portal |
+            cybercrime.gov.in</p>
+        <p style="font-size:0.93em;color:#888;margin-top:6px;">Website Content Managed by Ministry of Home Affairs,
+            Govt. of India. Best viewed in Mozilla Firefox, Google Chrome [D].<br>
+            Visitor Count: 199534845<br>
+            Last Updated: 11/03/2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

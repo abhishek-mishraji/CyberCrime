@@ -1,0 +1,260 @@
+body {
+    font-family: 'Open Sans', 'Noto Sans Devanagari', sans-serif;
+    background: #e9ecef;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.gov-topbar {
+    background: #0b3d91;
+    height: 8px;
+    width: 100%;
+}
+
+.top-notice-bar {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    border-bottom: 4px solid #0b3d91;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 50%;
+    border: 1.5px solid #e0e0e0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.header-center {
+    text-align: center;
+    flex: 1;
+}
+
+.gov-india,
+.mha {
+    display: block;
+    font-size: 1.1em;
+    color: #0b3d91;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.en-title {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #0b3d91;
+    margin: 0;
+    padding: 12px 0;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 6px 10px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    background: white;
+    color: #0b3d91;
+    border-radius: 5px;
+}
+
+.hero-section {
+    background: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.hero-section h2 {
+    color: #0b3d91;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.search-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background: #0b3d91;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003366;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 1.05em;
+}
+
+.complaint-details {
+    background: #e6f0ff;
+    border-left: 5px solid #0b3d91;
+    padding: 18px 20px;
+    border-radius: 7px;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95em;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    color: #555;
+    margin-top: auto;
+    padding: 18px 0 10px 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+    border-top: 4px solid #0b3d91;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 24px 0 0 0;
+    position: relative;
+    padding: 0 10px;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e0e7ef;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e0e7ef;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 7px;
+    border: 2px solid #e0e7ef;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.step.completed .circle {
+    background: #0b3d91;
+    color: #fff;
+    border: 2px solid #0b3d91;
+}
+
+.step.active .circle {
+    background: #1e90ff;
+    color: #fff;
+    border: 2px solid #1e90ff;
+}
+
+.label {
+    font-size: 0.98em;
+    color: #222;
+    text-align: center;
+    margin-top: 2px;
+    max-width: 90px;
+}
+
+.step:not(:last-child) {
+    margin-right: 0px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header .header-left,
+    .main-header .header-right {
+        margin: 10px 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+}
